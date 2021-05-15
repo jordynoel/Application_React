@@ -6,6 +6,10 @@ const Library = ({ research, onDelete, onFilter }) => {
   const [filter, setFilter] = useState("");
 
   const filterLibrary = () => {
+    if (!filter) {
+      alert("Fill in a filter value first!");
+      return;
+    }
     onFilter(filter);
   };
   return (
