@@ -7,10 +7,10 @@ const Header = ({ title }) => {
         <h1>{title}</h1>
         <ul className="nav-items">
           <li>
-            <a href="#">Research library</a>
+            <a href="/">Research library</a>
           </li>
           <li>
-            <a href="#">Add research</a>
+            <a href="/addResearch">Add research</a>
           </li>
           <li>
             <a href="#">Dropdown</a>

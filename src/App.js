@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Library from "./components/Library";
 import { useState } from "react";
 import AddResearchItem from "./components/AddResearchItem";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
   const [research, setResearch] = useState([
@@ -61,19 +62,32 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <Header title="Research library!!" />
-      {research.length > 0 ? (
-        <Library
-          research={research}
-          onDelete={deleteResearch}
-          onFilter={filterResearch}
+    <Router>
+      <div className="container">
+        <Header title="Research library!!" />
+        <Route
+          path="/"
+          exact
+          render={(props) => (
+            <div>
+              {research.length > 0 ? (
+                <Library
+                  research={research}
+                  onDelete={deleteResearch}
+                  onFilter={filterResearch}
+                />
+              ) : (
+                <p className="empty-library">No research works available!</p>
+              )}
+            </div>
+          )}
         />
-      ) : (
-        <p className="empty-library">No research works available!</p>
-      )}
-      <AddResearchItem onAdd={AddResearch} />
-    </div>
+        <Route
+          path="/addResearch"
+          render={(props) => <AddResearchItem onAdd={AddResearch} />}
+        />
+      </div>
+    </Router>
   );
 }
 

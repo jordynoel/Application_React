@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const AddResearchItem = ({ onAdd }) => {
-  const [title, setTitle] = useState();
+  const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [url, setUrl] = useState("");
   const [pages, setPages] = useState(0);

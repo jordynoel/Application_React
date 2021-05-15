@@ -1,8 +1,12 @@
 const Button = ({ color, text }) => {
   return (
-    <button className="button" style={{ backgroundColor: color }}>
+    <a
+      className="button"
+      href="/addResearch"
+      style={{ backgroundColor: color, textDecorationLine: "none" }}
+    >
       {text}
-    </button>
+    </a>
   );
 };
 
