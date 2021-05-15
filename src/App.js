@@ -3,6 +3,7 @@ import Library from "./components/Library";
 import { useState } from "react";
 import AddResearchItem from "./components/AddResearchItem";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Counter from "./components/Counter";
 
 function App() {
   const [research, setResearch] = useState([
@@ -86,6 +87,7 @@ function App() {
           path="/addResearch"
           render={(props) => <AddResearchItem onAdd={AddResearch} />}
         />
+        <Route path="/counter" render={(props) => <Counter />} />
       </div>
     </Router>
   );

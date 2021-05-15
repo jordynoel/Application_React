@@ -157,3 +157,21 @@ th {
   color: white;
   border: none;
 }
+
+.counter {
+  font-size: 5rem;
+  text-shadow: 4px 4px lightslategrey;
+}
+
+.counter-container {
+  text-align: center;
+}
+
+.btn-counter {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  background-color: mediumslateblue;
+}

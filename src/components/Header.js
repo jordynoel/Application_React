@@ -13,7 +13,7 @@ const Header = ({ title }) => {
             <a href="/addResearch">Add research</a>
           </li>
           <li>
-            <a href="#">Dropdown</a>
+            <a href="/counter">Dropdown</a>
           </li>
         </ul>
       </div>
