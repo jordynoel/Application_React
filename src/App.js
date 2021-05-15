@@ -54,11 +54,21 @@ function App() {
     setResearch(research.filter((item) => item.id !== id));
   };
 
+  //Filter
+  const filterResearch = (title) => {
+    console.log(title);
+    setResearch(research.filter((item) => item.title === title));
+  };
+
   return (
     <div className="container">
       <Header title="Research library!!" />
       {research.length > 0 ? (
-        <Library research={research} onDelete={deleteResearch} />
+        <Library
+          research={research}
+          onDelete={deleteResearch}
+          onFilter={filterResearch}
+        />
       ) : (
         <p className="empty-library">No research works available!</p>
       )}
