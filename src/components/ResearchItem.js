@@ -15,7 +15,7 @@ const ResearchItem = ({ research, onDelete }) => {
       <td>{research.url}</td>
       <td>{research.pages}</td>
       <td>
-        <div onClick={() => deleteCheck(research.id)}>
+        <div id="delete-item" onClick={() => deleteCheck(research.id)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

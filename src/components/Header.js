@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownMenu from "./DropdownMenu";
 
 const Header = ({ title }) => {
   return (
@@ -13,7 +15,10 @@ const Header = ({ title }) => {
             <a href="/addResearch">Add research</a>
           </li>
           <li>
-            <a href="/counter">Dropdown</a>
+            <a href="/counter">Counter</a>
+          </li>
+          <li>
+            <DropdownMenu />
           </li>
         </ul>
       </div>

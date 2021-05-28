@@ -11,6 +11,16 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
+Cypress.Commands.add("fillForm", (title, author, url, pages) => {
+  cy.get("#inputTitle").focus().type(title);
+  cy.get("#inputAuthor").focus().type(author);
+  cy.get("#inputUrl").focus().type(url);
+  cy.get("#inputPages").focus().type(pages);
+});
+
+Cypress.Commands.add("clickNav", (navItem) => {
+  cy.get(".nav-items").contains(navItem).click();
+});
 //
 //
 // -- This is a child command --

@@ -16,6 +16,7 @@ const AddResearchItem = ({ onAdd }) => {
     if (title && author && url && pages) {
       console.log("valid form");
       onAdd({ title, author, url, pages });
+      alert("Research work added");
       resetForm();
       return;
     }
@@ -54,6 +55,8 @@ const AddResearchItem = ({ onAdd }) => {
             type="text"
             placeholder="Enter title"
             value={title}
+            maxLength="30"
+            id="inputTitle"
             onChange={(e) => setTitle(e.target.value)}
           />
           <span className="error-text">{titleError}</span>
@@ -64,6 +67,7 @@ const AddResearchItem = ({ onAdd }) => {
             type="text"
             placeholder="Enter author"
             value={author}
+            id="inputAuthor"
             onChange={(e) => setAuthor(e.target.value)}
           />
           <span className="error-text">{authorError}</span>
@@ -74,6 +78,7 @@ const AddResearchItem = ({ onAdd }) => {
             type="text"
             placeholder="Enter url"
             value={url}
+            id="inputUrl"
             onChange={(e) => setUrl(e.target.value)}
           />
           <span className="error-text">{urlError}</span>
@@ -84,12 +89,18 @@ const AddResearchItem = ({ onAdd }) => {
             type="number"
             placeholder="Enter nr of pages"
             value={pages}
+            id="inputPages"
             onChange={(e) => setPages(e.target.value)}
           />
           <span className="error-text">{pagesError}</span>
         </div>
         <div className="form-control">
-          <input className="submit" type="submit" value="Submit" />
+          <input
+            className="submit"
+            type="submit"
+            value="Submit"
+            data-cy="submit"
+          />
         </div>
       </form>
     </div>
